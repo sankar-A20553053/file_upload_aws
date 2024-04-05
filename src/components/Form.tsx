@@ -2,13 +2,14 @@ import FileUploadRoundedIcon from "@mui/icons-material/FileUploadRounded";
 import { useRef } from "react";
 
 function Form() {
-  const image = useRef();
+  const image = useRef<HTMLInputElement>();
 
   function onImage() {
-    image.current.click();
+    image.current?.click();
   }
 
   function onSubmit(e) {
+    console.log(typeof e);
     e.preventDefault();
     console.log(e.target[0].value);
     console.log(e.target[1].value);
