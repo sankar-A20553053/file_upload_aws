@@ -1,0 +1,76 @@
+#root {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container,
+span {
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  width: 100%;
+  align-items: start;
+  justify-content: stretch;
+}
+
+label,
+p {
+  color: #303030;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+input {
+  min-width: 300px;
+  width: 100%;
+  height: 50px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 7px;
+  color: black;
+  border: 2px solid black;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+input:focus {
+  outline: none;
+}
+
+#img-input {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  background-color: #f4f4f4;
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background-color: #00224d;
+  cursor: pointer;
+  font-weight: bolder;
+  color: #f4f4f4;
+}
+
+input[type="file"] {
+  display: none;
+}
