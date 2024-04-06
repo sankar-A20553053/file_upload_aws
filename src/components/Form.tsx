@@ -17,8 +17,8 @@ function Form() {
 
     // S3 Credentials
     AWS.config.update({
-      accessKeyId: "sdjajskdjasdlkkajlsdlk",
-      secretAccessKey: "asdhashdjasdjasjkdkjasdjnasddkkasd",
+      accessKeyId: process.env.KEY,
+      secretAccessKey: process.env.SECRET_KEY,
     });
     const s3 = new AWS.S3({
       params: { Bucket: S3_BUCKET },
