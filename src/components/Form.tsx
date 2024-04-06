@@ -43,13 +43,16 @@ function Form() {
       })
       .promise();
 
-    await upload.then((err: unknown, data: never) => {
-      console.log(err);
-      console.log(data);
+    await upload
+      .then((data: AWS.S3.PutObjectOutput) => {
+        console.log(data);
 
-      // Fille successfully uploaded
-      alert("File uploaded successfully.");
-    });
+        // File successfully uploaded
+        console.log("File uploaded successfully.");
+      })
+      .catch((err: AWS.AWSError) => {
+        console.error(err);
+      });
   };
 
   function onImage() {
