@@ -37,7 +37,7 @@ function Form() {
 
     const upload = s3
       .putObject(params)
-      .on("httpUploadProgress", (evt) => {
+      .on("httpUploadProgress", () => {
         // File uploading progress
         console.log("Uploading ");
       })
