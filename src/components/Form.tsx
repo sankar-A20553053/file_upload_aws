@@ -43,7 +43,7 @@ function Form() {
       })
       .promise();
 
-    await upload.then((err, data) => {
+    await upload.then((err: unknown, data: never) => {
       console.log(err);
       console.log(data);
 
