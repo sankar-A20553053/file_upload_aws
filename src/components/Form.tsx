@@ -39,16 +39,16 @@ function Form() {
       .putObject(params)
       .on("httpUploadProgress", (evt) => {
         // File uploading progress
-        console.log(
-          "Uploading " + parseInt((evt.loaded * 100) / evt.total) + "%"
-        );
+        console.log("Uploading ");
       })
       .promise();
 
     await upload.then((err, data) => {
       console.log(err);
+      console.log(data);
+
       // Fille successfully uploaded
-      // alert("File uploaded successfully.");
+      alert("File uploaded successfully.");
     });
   };
 
